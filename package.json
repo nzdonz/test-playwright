@@ -1,0 +1,34 @@
+{
+  "name": "test-playwright-mocha",
+  "version": "1.0.0",
+  "author": "noel sevilla",
+  "license": "UNLICENSED",
+  "scripts": {
+    "ci": "rm -fr node_modules && yarn install --frozen-lockfile",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix && npm run lint",
+    "test-ui-parallel": "mocha --parallel -r ./test/services/test-hooks.ts ./test/tests/ui/**/*.e2e.ts",
+    "test-ui": "mocha -r ./test/services/test-hooks.ts ./test/tests/ui/**/*.e2e.ts",
+    "test-api": "mocha ./test/tests/api/**/*.e2e.ts"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.18",
+    "@types/mocha": "^8.2.0",
+    "@types/node": "^16.11.7",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "axios": "^0.21.1",
+    "chai": "^4.2.0",
+    "eslint": "^7.22.0",
+    "eslint-plugin-mocha": "^8.1.0",
+    "mocha": "^8.2.1",
+    "mocha-junit-reporter": "^2.0.0",
+    "mochawesome": "6.2.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "5.1.0",
+    "playwright": "1.9.2",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "4.3.5"
+  }
+}

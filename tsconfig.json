@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es2021",
+    "esModuleInterop": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "types"
+    ],
+    "types": [
+      "node",
+      "global",
+      "playwright",
+      "@types/chai",
+      "@types/mocha",
+    ],
+    "paths": {
+      "@enums/*": ["./test/enums/*"],
+      "@pages/*": ["./test/pages/*"],
+      "@services/*": ["./test/services/*"],
+      "@interfaces/*": ["test/interfaces/*"],
+      "@test/*": ["./test/*"],
+    }
+  }
+}

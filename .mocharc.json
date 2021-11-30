@@ -1,0 +1,26 @@
+{
+  "reporter": "mochawesome",
+  "reporter-option": [
+    "reportDir=artifacts/mochawesome-report/",
+    "quiet=true",
+    "overwrite=true",
+    "html=true",
+    "json=true",
+    "time-out=false",
+    "timestamp=yyyymmdd_HHMMss"
+  ],
+  "recursive": true,
+  "require": [
+    "ts-node/register",
+    "tsconfig-paths/register",
+    "chai/register-expect",
+    "chai/register-should",
+    "chai/register-assert"
+  ],
+  "extension": [
+    ".e2e.ts"
+  ],
+  "timeout": 120000,
+  "retries": 0,
+  "inline-diffs": true
+}
